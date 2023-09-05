@@ -70,7 +70,6 @@ impl Executor {
     
                 if future.as_mut().poll(context).is_pending() {
                     *future_slot = Some(future);
-
                     println!("Task is not finished yet");
                 }
                 else {
